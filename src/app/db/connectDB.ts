@@ -3,7 +3,7 @@
 import mongoose from "mongoose";
 
 export default async function connectDB() {
-  const url = "mongodb://localhost:27017/mongoDB-test";
+  const url = process.env.MONGODB_URI as string;
 
   try {
     mongoose.connect(url);

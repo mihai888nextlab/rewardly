@@ -7,6 +7,5 @@ connectDB();
 
 export default async function findPhoneNumber(phoneNumber: string) {
   let user = await userModel.findOne({ phone_number: phoneNumber });
-  console.log(userModel);
-  return user;
+  return JSON.stringify(user);
 }
